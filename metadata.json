@@ -1,0 +1,5 @@
+{
+  "name": "Kalident Stomatologija",
+  "description": "Zvanični sajt stomatološke ordinacije Kalident u Beogradu - vrhunska usluga i moderan dizajn.",
+  "requestFramePermissions": ["geolocation"]
+}

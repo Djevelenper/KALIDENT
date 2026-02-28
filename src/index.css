@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #00AEEF;
+  --color-brand-turquoise: #00C2CB;
+  --color-brand-light: #F0F9FF;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-white overflow-x-hidden;
+  }
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #00AEEF 0%, #0072BC 100%);
+}
+
+.gradient-turquoise {
+  background: linear-gradient(135deg, #00C2CB 0%, #009688 100%);
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/30 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-brand-blue to-brand-turquoise text-white px-8 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:scale-105 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-white text-brand-blue px-8 py-3 rounded-full font-semibold border-2 border-brand-blue transition-all hover:bg-brand-light hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-sm;
+}
+
+.nav-link {
+  @apply relative font-medium transition-colors hover:text-brand-blue after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-brand-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+}
